@@ -8,9 +8,11 @@
 import Foundation
 
 // main logiс
-func mainLogic (number: UInt8) {
+func mainLogic () {
     var isWin = false
+    let randomNumber = UInt8.random(in: 1...250)
     repeat {
+        print("Компьютер случайным образом загадал число. Вам требуется отгадать его")
         print("Введите ваш вариант числа от 1 до 250")
         // получение значения с клавиатуры
         guard let userNumber = UInt8(readLine() ?? "") else {

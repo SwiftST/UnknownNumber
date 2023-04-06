@@ -8,13 +8,9 @@
 import Foundation
 
 var oneMoreRound: String?
-var randomNumber: UInt8
 
 repeat {
-    // генерация случайного числа
-    randomNumber = UInt8.random(in: 1...250)
-    print("Компьютер случайным образом загадал число. Вам требуется отгадать его")
-    mainLogic(number: randomNumber)
+    mainLogic()
     print("Еще один раунд? (y/n)")
     oneMoreRound = readLine()
 } while checkAnswer(&oneMoreRound)
